@@ -1,0 +1,39 @@
+//Using typedef for structure employee with members
+emp_id,name,salary. create an array of 3 employees,
+input their details from user, print the employee with
+the highest salary
+#include <stdio.h>
+typedef struct {
+ int emp_id;
+ char name[50];
+ float salary;
+} Employee;
+int main() {
+ Employee emp[3];
+ int i, found = 0;
+ // Input employee details
+ for(i = 0; i < 3; i++)
+ {
+ printf("\nEnter details of Employee %d:\n", i +
+1);
+ printf("Employee ID: ");
+ scanf("%d", &emp[i].emp_id);
+ printf("Name: ");
+ scanf("%s", emp[i].name);
+ printf("Salary: ");
+ scanf("%f", &emp[i].salary);
+ }
+ for(i = 1; i < 3; i++)
+ {
+ if(emp[i].salary > emp[found].salary)
+ {
+ found = i;
+ }
+ }
+ printf("\n==== Employee with Highest Salary
+====\n");
+ printf("Employee ID: %d\n", emp[found].emp_id);
+ printf("Name: %s\n", emp[found].name);
+ printf("Salary: %.2f\n", emp[found].salary);
+ return 0;
+}

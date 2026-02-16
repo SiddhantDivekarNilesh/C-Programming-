@@ -1,0 +1,22 @@
+//Program Nested structure Example-student with DOB
+#include<stdio.h>
+struct Date
+{
+    int day;
+    int mon;
+    int yr;
+};
+struct Student
+{
+    int id;
+    char name[20];
+    struct Date dob;//nested structure
+};
+int main()
+{
+    struct Student s1={101,"Siddhant",{31,07,2007}};
+    printf("ID: %d\n",s1.id);
+    printf("Name.: %s\n",s1.name);
+    printf("DOB.: %d-%d-%d",s1.dob.day,s1.dob.mon,s1.dob.yr);
+    return 0;
+}

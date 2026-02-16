@@ -1,0 +1,24 @@
+
+//Create a struct called Student with members name,age and total marks.Write a c program to input data for 2 students,display the information and find the average of total marks
+#include<stdio.h>
+struct Student
+{
+    char name[20];
+    int age;
+    int tot_marks;
+    
+};
+int main()
+{
+    struct Student s[2]={{"Siddhant",18,50},{"Anushka",18,25}};
+    for(int i=0;i<2;i++)
+    {
+        printf("Name: %s\nAge: %d\nTotal Marks: %d\n",s[i].name,s[i].age,s[i].tot_marks);
+    }
+    for(int i=0;i<2;i++)
+    {
+    float average=(s[i].tot_marks+s[++i].tot_marks)/2;
+    printf("Average of both students are: %f",average);
+    }
+    return 0;
+}

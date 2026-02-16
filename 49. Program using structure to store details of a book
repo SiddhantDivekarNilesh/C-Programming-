@@ -1,0 +1,31 @@
+//write a c program using structure to store the details
+of a book(title,author,price)
+#include<stdio.h>
+#include<string.h>
+struct Books
+{
+ char title[20];
+ char author[20];
+ float price;
+};
+int main()
+{
+ struct Books b1={"C Programming p1","Dennis
+Richie",1000};
+ struct Books b2={"C Programming p2","Dennis
+Richie",1000};
+ struct Books b3={"C Programming p3","Dennis
+Richie",1000};
+ struct Books b4={"C Programming p4","Dennis
+Richie",1000};
+ struct Books b5={"C Programming p5","Dennis
+Richie",1000};
+ struct Books *book[5]={&b1,&b2,&b3,&b4,&b5};
+ for(int i=0;i<5;i++)
+ {
+ printf("Title: %s\nAuthor: %s\nPrice:
+%0.2f\n",book[i]->title,book[i]->author,book[i]->price);
+ }
+ return 0;
+
+}
