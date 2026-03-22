@@ -1,0 +1,8 @@
+// Program: Enum Example - Weekdays
+#include <stdio.h>
+enum Week {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+int main() {
+    enum Week day;
+    day = Thursday;
+    printf("Numeric value of Thursday is: %d\n", day);
+    return 0;
