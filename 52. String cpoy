@@ -1,0 +1,11 @@
+//Program using strcpy
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+   char source[]="Welcome";
+   char destination[20];
+   strcpy(destination,source);
+   printf("Destination= %s",destination);
+   return 0;
+}
